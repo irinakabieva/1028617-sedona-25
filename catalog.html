@@ -5,30 +5,28 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-  <header>
-    <nav class="main-nav">
-      <ul>
-        <li class="nav-item">
-          <a href="index.html">Информация</a>
-        </li>
-        <li class="nav-item">
-          <a href="photos.html">Фото и видео</a>
-        </li>
-        <li class="nav-item">
+    <header>
+        <nav class="main-nav">
           <a class="logo">
             <img src="img/index-logo.svg" alt="Логотип сайта Седона">
           </a>
-        </li>
-        <li class="nav-item">
-          <a href="map.html">Карта штата</a>
-        </li>
-        <li class="nav-item nav-current">
-          <a href="hotels.html">Гостиницы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+          <ul>
+            <li class="nav-item">
+              <a href="index.html">Информация</a>
+            </li>
+            <li class="nav-item">
+              <a href="photos.html">Фото и видео</a>
+            </li>
+            <li class="nav-item">
+              <a href="map.html">Карта штата</a>
+            </li>
+            <li class="nav-item">
+              <a href="hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <main>
       <h1 class="visually-hidden">Каталог доступного жилья штата Седона</h1>
       <section class="search-form">
           <h2 class="visually-hidden"> Форма поиска жилья</h2>
@@ -38,24 +36,22 @@
           <h2 class="visually-hiden">Список доступного жилья</h2>
           <div>
             <b>Найдено:3</b>
-            <p class="sort">
+            <span class="sort">
               Сортировка
-              <a class="sort-current">По цене</a>
-              <a>По типу</a>
-              <a>По рейтингу</a>
-            </p>
-            <p class="sort-direction">
-              <a class="sort-asc">По возрастанию</a>
-              <a class="sort-dsc sort-current">По убыванию</a>
-            </p>
+              <a href="#" class="sort-current">По цене</a>
+              <a href="#">По типу</a>
+              <a href="#">По рейтингу</a>
+            </span>
+            <span class="sort-direction">
+              <a href="#" class="sort-asc">По возрастанию</a>
+              <a href="#" class="sort-dsc sort-current">По убыванию</a>
+            </span>
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <p class="item-image">
-                <a href="big-img.png" lang="en">
-                  <img href="img.png" alt="Amara Resort & Spa" />
-                </a>
-              </p>
+              <a href="big-img.png" class="item-image" lang="en">
+                <img href="img.png" alt="Amara Resort & Spa" />
+              </a>
               <div class="item-info">
                 <h3>
                   <a href="catalog-item.html" lang="en">Amara Resort & Spa</a>
@@ -70,41 +66,46 @@
                 </p>
               </div>
               <p class="item-rating">
-                <img class="rating-stars" src="five-stars.png" alt="Пять звезд">
+                <span class="rating-stars">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                </span>
                 <span class="rating-value">Рейтинг: 8,5</span>
               </p>
             </li>
-              <li class="catalog-item">
-                <p class="item-image">
-                  <a href="big-img.png" lang="en">
-                    <img href="img.png" alt="Desert Quail Inn" />
-                  </a>
+            <li class="catalog-item">
+              <a href="big-img.png" class="item-image" lang="en">
+                  <img href="img.png" alt="Desert Quail Inn" />
+              </a>
+              <div class="item-info">
+                <h3>
+                  <a href="catalog-item.html" lang="en">Desert Quail Inn</a>
+                </h3>
+                <p>
+                  <span class="item-type">Мотель</span>
+                  <span class="item-price">От 3000 Р.</span>
                 </p>
-                <div class="item-info">
-                  <h3>
-                    <a href="catalog-item.html" lang="en">Desert Quail Inn</a>
-                  </h3>
-                  <p>
-                    <span class="item-type">Мотель</span>
-                    <span class="item-price">От 3000 Р.</span>
-                  </p>
-                  <p>
-                    <a class="button button-more">Подробнее</a>
-                    <a class="button button-book">Забронировать</a>
-                  </p>
-                </div>
-                <p class="item-rating">
-                  <img class="rating-stars" src="three-stars.png" alt="Три звезды">
-                  <span class="rating-value">Рейтинг: 8,9</span>
+                <p>
+                  <a class="button button-more">Подробнее</a>
+                  <a class="button button-book">Забронировать</a>
                 </p>
-              </li>
+              </div>
+              <p class="item-rating">
+                <span class="rating-stars">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                </span>
+                <span class="rating-value">Рейтинг: 8,9</span>
+              </p>
             </li>
             <li class="catalog-item">
-              <p class="item-image">
-                <a href="big-img.png" lang="en">
+              <a href="big-img.png" class="item-image" lang="en">
                   <img href="img.png" alt="Villas at Poco Diablo" />
-                </a>
-              </p>
+              </a>
               <div class="item-info">
                 <h3>
                   <a href="catalog-item.html" lang="en">Villas at Poco Diablo</a>
@@ -119,29 +120,32 @@
                 </p>
               </div>
               <p class="item-rating">
-                <img class="rating-stars" src="two-stars.png" alt="Две звезды">
+                <span class="rating-stars">
+                    <img src="star.png" alt="Звезда">
+                    <img src="star.png" alt="Звезда">
+                </span>
                 <span class="rating-value">Рейтинг: 9,2</span>
               </p>
             </li>
           </ul>
       </section>
-  </main>
-  <footer>
-    <b>#visitsedona</b>
-    <ul class="social-links">
-      <li class="social-link">
-        <a href="http://twitter.com">Твитер</a>
-      </li>
-      <li class="social-link">
-        <a href="http://facebook.com">Фейсбук</a>
-      </li>
-      <li class="social-link">
-        <a href="http://youtube.com">Ютуб</a>
-      </li>
-    </ul>
-    <p lang="en">Website by
-      <a href="http://htmlacademy.ru">html academy</a>
-    </p>
-  </footer>
+    </main>
+    <footer>
+      <p>#visitsedona</p>
+      <ul class="social-links">
+        <li class="social-link">
+          <a href="http://twitter.com">Твитер</a>
+        </li>
+        <li class="social-link">
+          <a href="http://facebook.com">Фейсбук</a>
+        </li>
+        <li class="social-link">
+          <a href="http://youtube.com">Ютуб</a>
+        </li>
+      </ul>
+      <p lang="en">Website by
+        <a href="http://htmlacademy.ru"><img src="htmlacademy-logo.png" alt="логотип html academy"/></a>
+      </p>
+    </footer>
   </body>
 </html>
