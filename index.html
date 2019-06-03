@@ -42,25 +42,25 @@
             <p class="description-number">— №1 —</p>
             <p class="description-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img class="reason-image" src="img/veranda-with-flowers.jpg" alt="Веранда дома с цветами">
+          <img class="reason-image" src="img/veranda-with-flowers.jpg" alt="Веранда дома с цветами" />
           <ul class="additional-reasons">
               <li class="reason-item reason-description">
-                <img class="reason-icon" src="img/house.svg" alt="Жилье">
                 <h3 class="description-header">Жилье</h3>
+                <img class="reason-icon" src="img/house.svg" alt="Жилье" />
                 <p class="description-text">
                   Большинство едет в гранд каньон и толпится там
                 </p>
               </li>
               <li class="reason-item reason-description">
-                  <img class="reason-icon" src="img/food.svg" alt="Еда">
                   <h3 class="description-header">Еда</h3>
+                  <img class="reason-icon" src="img/food.svg" alt="Еда" />
                   <p class="description-text">
                     Всегда заказывайте фирменный бургер, вы не разочаруетесь!
                   </p>
               </li>
               <li class="reason-item reason-description">
-                  <img class="reason-icon" src="img/gift.svg" alt="Сувениры">
                   <h3 class="description-header">Сувениры</h3>
+                  <img class="reason-icon" src="img/gift.svg" alt="Сувениры" />
                   <p class="description-text">
                     Не только китайского, но и местного производства!
                   </p>
@@ -92,16 +92,28 @@
         </li>
       </ol>
     </section>
-    <section class="search-form">
+    <section class="search-hotel">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
       <b>Заинтересовались</b>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <a href="№">Поиск гостиницы в Седоне</a>
-      <!-- Форма -->
+      <div class="search-container">
+        <a href="search.html" class="button button-search">Поиск гостиницы в Седоне</a>
+        <form class="search-form" action="search.html" method="get">
+          <laber for="arrival-field">Дата заезда:</laber>
+          <input type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
+          <laber for="departure-field">Дата выезда:</laber>
+          <input type="text" id="departure-field" name="departure" placeholder="4 июля 2017"/>
+          <label for="adults-field">Взрослые:</label>
+          <input type="number" id="adults-field" name="adults" placeholder="2" step="1" min="0"/>
+          <label for="children-field">Дети:</label>
+          <input type="number" id="children-field" name="children" placeholder="2" step="1" min="0"/>
+          <button class="button button-submit" type="submit">найти</button>
+        </form>
+      </div>
     </section>
     <section class="google-map">
       <h2 class="visually-hidden">Седона на карте мира</h2>
-      <img src="img/map.jpg" alt="Седона на карте мира">
+      <img src="img/map.jpg" alt="Седона, Коконино-Каунти, штат Аризона, Соединённые Штаты Америки">
     </section>
   </main>
   <footer>
