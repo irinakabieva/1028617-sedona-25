@@ -8,7 +8,7 @@
   <header>
     <nav class="main-nav">
       <a class="logo">
-        <img src="img/logo.svg" alt="Логотип сайта Седона">
+        <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона">
       </a>
       <ul>
         <li class="nav-item">
@@ -21,7 +21,7 @@
           <a href="map.html">Карта штата</a>
         </li>
         <li class="nav-item">
-          <a href="hotels.html">Гостиницы</a>
+          <a href="catalog.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -29,7 +29,8 @@
   <main>
     <h1 class="visually-hiden">Сайт штата Седона</h1>
     <div class="welcome">
-      <img src="img/welcome-text.svg" alt="Добро пожаловать в великолепную Седону" />
+      <!-- Сделать темный фон -->
+      <img src="img/welcome-text.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону" />
     </div>
     <b>Седона — небольшой городок в Аризоне, заслуживающий большего!-</b>
     <section class="reasons">
@@ -42,25 +43,25 @@
             <p class="description-number">— №1 —</p>
             <p class="description-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img class="reason-image" src="img/veranda-with-flowers.jpg" alt="Веранда дома с цветами" />
+          <img class="reason-image" src="img/veranda-with-flowers.jpg" width="800" height="256" alt="Веранда дома с цветами" />
           <ul class="additional-reasons">
               <li class="reason-item reason-description">
                 <h3 class="description-header">Жилье</h3>
-                <img class="reason-icon" src="img/house.svg" alt="Жилье" />
+                <img class="reason-icon" src="img/house.svg" width="75" height="72" alt="Жилье" />
                 <p class="description-text">
                   Большинство едет в гранд каньон и толпится там
                 </p>
               </li>
               <li class="reason-item reason-description">
                   <h3 class="description-header">Еда</h3>
-                  <img class="reason-icon" src="img/food.svg" alt="Еда" />
+                  <img class="reason-icon" src="img/food.svg" width="74" height="70" alt="Еда" />
                   <p class="description-text">
                     Всегда заказывайте фирменный бургер, вы не разочаруетесь!
                   </p>
               </li>
               <li class="reason-item reason-description">
                   <h3 class="description-header">Сувениры</h3>
-                  <img class="reason-icon" src="img/gift.svg" alt="Сувениры" />
+                  <img class="reason-icon" src="img/gift.svg" width="64" height="76" alt="Сувениры" />
                   <p class="description-text">
                     Не только китайского, но и местного производства!
                   </p>
@@ -73,7 +74,7 @@
             <p class="description-number">— №2 —</p>
             <p class="description-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
-          <img class="reason-image" src="img/devils-bridge.jpg" alt="Мост дьявола">
+          <img class="reason-image" src="img/devils-bridge.jpg" width="800" height="256" alt="Мост дьявола">
         </li>
         <li class="reason-item reason-description">
           <h3 class="description-header">Небольшая площадь</h3>
@@ -97,23 +98,37 @@
       <b>Заинтересовались</b>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <div class="search-container">
-        <a href="search.html" class="button button-search">Поиск гостиницы в Седоне</a>
+        <a href="catalog.html" class="button button-search">Поиск гостиницы в Седоне</a>
         <form class="search-form" action="search.html" method="get">
-          <laber for="arrival-field">Дата заезда:</laber>
-          <input type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
-          <laber for="departure-field">Дата выезда:</laber>
-          <input type="text" id="departure-field" name="departure" placeholder="4 июля 2017"/>
-          <label for="adults-field">Взрослые:</label>
-          <input type="number" id="adults-field" name="adults" placeholder="2" step="1" min="0"/>
-          <label for="children-field">Дети:</label>
-          <input type="number" id="children-field" name="children" placeholder="2" step="1" min="0"/>
+          <p class="form-field">
+            <label for="arrival-field">Дата заезда:</label>
+            <input type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
+            <button class="button button-icon icon-calendar" type="button">календарь</button>
+          </p>
+          <p class="form-field">>
+            <label for="departure-field">Дата выезда:</label>
+            <input type="text" id="departure-field" name="departure" placeholder="4 июля 2017"/>
+            <button class="button button-icon icon-calendar" type="button">календарь</button>
+          </p>
+          <p class="form-field">
+            <label for="adults-field">Взрослые:</label>
+            <button class="button button-counter button-plus" type="button" aria-label="уменьшить количество на еденицу"></button>
+            <input type="text" id="adults-field" name="adults" placeholder="2" />
+            <button class="button button-counter button-minus" type="button" aria-label="увеличить количество на еденицу"></button>
+          </p>
+          <p class="form-field">
+            <label for="children-field">Дети:</label>
+            <button class="button button-counter button-plus" type="button" aria-label="уменьшить количество на еденицу"></button>
+            <input type="text" id="children-field" name="children" placeholder="2" />
+            <button class="button button-counter button-minus" type="button" aria-label="увеличить количество на еденицу"></button>
+          </p>
           <button class="button button-submit" type="submit">найти</button>
         </form>
       </div>
     </section>
     <section class="google-map">
       <h2 class="visually-hidden">Седона на карте мира</h2>
-      <img src="img/map.jpg" alt="Седона, Коконино-Каунти, штат Аризона, Соединённые Штаты Америки">
+      <img src="img/map.jpg" width="1200" height="593" alt="Седона, Коконино-Каунти, штат Аризона, Соединённые Штаты Америки">
     </section>
   </main>
   <footer>
@@ -130,7 +145,10 @@
       </li>
     </ul>
     <p lang="en">Website by
-      <a href="http://htmlacademy.ru"><img src="img/htmlacademy.svg" alt="логотип html academy"/></a>
+      <a href="https://up.htmlacademy.ru/htmlcss/25/project/sedona#sedona-3-8">
+        <img src="img/htmlacademy.svg" width="115" height="41" alt="логотип html academy"/>
+        <span class="visually-hidden">Website by htmlacademy</span>
+      </a>
     </p>
   </footer>
 </body>
