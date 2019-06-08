@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <nav class="main-nav">
-        <a html="index.html" class="logo">
+        <a href="index.html" class="logo">
           <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона">
         </a>
         <ul>
@@ -20,7 +23,7 @@
           <li class="nav-item">
             <a href="map.html">Карта штата</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item current-page">
             <a>Гостиницы</a>
           </li>
         </ul>
@@ -35,11 +38,11 @@
       <section class="catalog">
           <h2 class="visually-hiden">Список доступного жилья</h2>
           <div>
-            <b>Найдено:3</b>
-            <span>Сортировка</span>
-            <ul class="sort">
-              <li class="sort-item">
-                <a href="#" class="sort-current">По цене</a>
+            <b class="catalog-count">Найдено:3</b>
+            <span class="sort-label">Сортировка</span>
+            <ul class="catalog-sort">
+              <li class="sort-item sort-current">
+                <a href="#">По цене</a>
               </li>
               <li class="sort-item">
                 <a href="#">По типу</a>
@@ -52,27 +55,27 @@
               <li class="direction-item">
                 <a href="#" class="sort-asc">По возрастанию</a>
               </li>
-              <li class="direction-item">
-                <a href="#" class="sort-dsc sort-current">По убыванию</a>
+              <li class="direction-item direction-current">
+                <a href="#" class="sort-dsc">По убыванию</a>
               </li>
             </ul>
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <a href="img/arma-resot-spa.jpg" class="item-image" lang="en">
+              <a href="img/arma-resot-spa.jpg" lang="en">
                 <img src="img/arma-resot-spa.jpg" width="135" height="90" alt="Amara Resort & Spa" />
               </a>
               <div class="item-info">
                 <h3>
-                  <a href="catalog-item.html" lang="en">Amara Resort & Spa</a>
+                  <a href="catalog-item.html" class="item-link" lang="en">Amara Resort & Spa</a>
                 </h3>
                 <p>
                   <span class="item-type">гостиница</span>
                   <span class="item-price">от 4000 р.</span>
                 </p>
                 <p>
-                  <a class="button button-more" href="#">Подробнее</a>
-                  <a class="button button-book" href="#">Забронировать</a>
+                  <a class="button button-blue button-more" href="#">Подробнее</a>
+                  <a class="button button-brown button-book" href="#">Забронировать</a>
                 </p>
               </div>
               <p class="item-rating">
@@ -87,20 +90,20 @@
               </p>
             </li>
             <li class="catalog-item">
-              <a href="img/desert-quail-inn.jpg" class="item-image" lang="en">
+              <a href="img/desert-quail-inn.jpg" lang="en">
                   <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Desert Quail Inn" />
               </a>
               <div class="item-info">
                 <h3>
-                  <a href="catalog-item.html" lang="en">Desert Quail Inn</a>
+                  <a href="catalog-item.html" class="item-link" lang="en">Desert Quail Inn</a>
                 </h3>
                 <p>
                   <span class="item-type">Мотель</span>
                   <span class="item-price">От 3000 Р.</span>
                 </p>
                 <p>
-                  <a class="button button-more" href="#">Подробнее</a>
-                  <a class="button button-book" href="#">Забронировать</a>
+                  <a class="button button-blue button-more" href="#">Подробнее</a>
+                  <a class="button button-brown button-book" href="#">Забронировать</a>
                 </p>
               </div>
               <p class="item-rating">
@@ -113,20 +116,20 @@
               </p>
             </li>
             <li class="catalog-item">
-              <a href="img/villas-at-poco-diablo.jpg" class="item-image" lang="en">
+              <a href="img/villas-at-poco-diablo.jpg" lang="en">
                   <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo" />
               </a>
               <div class="item-info">
                 <h3>
-                  <a href="catalog-item.html" lang="en">Villas at Poco Diablo</a>
+                  <a href="catalog-item.html" class="item-link" lang="en">Villas at Poco Diablo</a>
                 </h3>
                 <p>
                   <span class="item-type">Апартаменты</span>
                   <span class="item-price">От 2000 Р.</span>
                 </p>
                 <p>
-                  <a class="button button-more" href="#">Подробнее</a>
-                  <a class="button button-book" href="#">Забронировать</a>
+                  <a class="button button-blue button-more" href="#">Подробнее</a>
+                  <a class="button button-brown button-book" href="#">Забронировать</a>
                 </p>
               </div>
               <p class="item-rating">
@@ -141,19 +144,19 @@
       </section>
     </main>
     <footer>
-      <p>#visitsedona</p>
+      <p class="visitsedona">#visitsedona</p>
       <ul class="social-links">
         <li class="social-link">
-          <a href="http://twitter.com">Твитер</a>
+          <a href="http://twitter.com" aria-label="Твитер">Твитер</a>
         </li>
         <li class="social-link">
-          <a href="http://facebook.com">Фейсбук</a>
+          <a href="http://facebook.com" aria-label="Фейсбук">Фейсбук</a>
         </li>
         <li class="social-link">
-          <a href="http://youtube.com">Ютуб</a>
+          <a href="http://youtube.com" aria-label="Ютуб">Ютуб</a>
         </li>
       </ul>
-      <p lang="en">Website by
+      <p class="copyright" lang="en">Website by
         <a href="https://up.htmlacademy.ru/htmlcss/25/project/sedona#sedona-3-8">
           <img src="img/htmlacademy.svg" width="115" height="41" alt="логотип html academy"/>
           <span class="visually-hidden">Website by htmlacademy</span>
