@@ -14,6 +14,11 @@ body {
   background: #fff;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -64,6 +69,23 @@ a {
   color: rgba(255, 255, 255, 0.3)
 }
 
+.main-nav {
+  position: relative;
+}
+
+.main-nav .logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-70px);
+}
+
+.main-nav .nav-items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
 
 .main-nav .nav-item {
   list-style: none;
@@ -72,6 +94,8 @@ a {
 .main-nav .nav-item a {
   color: #000000;
   font-weight: 700;
+
+  line-height: 56px;
 }
 
 .main-nav .nav-item a:hover,
@@ -90,26 +114,31 @@ a {
 .welcome {
   background: #b2e4f4 url("../img/welcome-background.jpg") no-repeat 0 0;
   text-align: center;
+  padding: 60px 0 80px 0;
+  margin-bottom: 60px;
 }
 
 .main-title {
+  display: block;
   font-size: 21px;
   font-weight: 700;
   line-height: 1.24;
+  width: 440px;
   text-align: center;
-  display: block;
+  margin: 0 auto 40px auto;
 }
 
 .reasons {
   text-align: center;
 }
 
-.reasons-list .reason-item {
-  list-style: none;
-}
-
 .reasons-title {
   line-height: 1.86;
+  margin-bottom: 55px;
+}
+
+.reasons-list .reason-item {
+  list-style: none;
 }
 
 .reason-description .description-header {
@@ -136,23 +165,48 @@ a {
   background: #eee;
 }
 
-.interested-title {
+.search-hotel {
+  padding-top: 55px;
+}
+
+.search-hotel .interested-title {
+  display: block;
+  margin-bottom: 25px;
+
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
-  display: block;
 }
 
-.specify-dates-title {
+.search-hotel .specify-dates-title {
+  display: block;
+  margin: 0 auto 55px auto;
+
   line-height: 1.71;
   text-align: center;
+  width: 434px;
 }
 
-.search-button {
+.search-hotel-container {
+  position: relative;
+
+  width: 568px;
+  margin: 0 auto;
+}
+
+.search-hotel .search-button {
+  display: block;
+  padding: 35px 0;
+
   line-height: 1.24;
   font-size: 21px;
   font-weight: bold;
+}
+
+.search-hotel .search-form {
+  position: absolute;
+  display: none;
 }
 
 .search-hotel input {
@@ -186,6 +240,12 @@ a {
   font-weight: bold;
 }
 
+.footer {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
 .visitsedona {
   font-size: 21px;
   font-weight: bold;
@@ -216,6 +276,10 @@ a {
 .copyright a {
   display: inline-block;
   vertical-align: middle;
+}
+
+.sort-container {
+  display: flex;
 }
 
 .catalog-count {

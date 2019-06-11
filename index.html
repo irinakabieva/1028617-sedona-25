@@ -8,12 +8,12 @@
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
+  <header class="container">
     <nav class="main-nav">
       <a class="logo">
         <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона">
       </a>
-      <ul>
+      <ul class="nav-items">
         <li class="nav-item current-page">
           <a href="info.html">Информация</a>
         </li>
@@ -29,7 +29,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="container">
     <h1 class="visually-hidden">Сайт штата Седона</h1>
     <div class="welcome">
       <!-- Сделать темный фон -->
@@ -102,7 +102,7 @@
       <p class="specify-dates-title">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <div class="search-hotel-container">
         <a href="catalog.html" class="button button-brown search-button">Поиск гостиницы в Седоне</a>
-        <form class="search-hotel" action="search.html" method="get">
+        <form class="search-form" action="search.html" method="get">
           <p class="form-field">
             <label for="arrival-field">Дата заезда:</label>
             <input type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
@@ -134,7 +134,7 @@
       <img src="img/map.jpg" width="1200" height="593" alt="Седона, Коконино-Каунти, штат Аризона, Соединённые Штаты Америки">
     </section>
   </main>
-  <footer>
+  <footer class="footer container">
     <p class="visitsedona">#visitsedona</p>
     <ul class="social-links">
       <li class="social-link">
