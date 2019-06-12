@@ -84,16 +84,24 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
 }
 
 .main-nav .nav-item {
   list-style: none;
+  width: 240px;
+}
+
+.main-nav .nav-item:nth-child(3) {
+  margin-left: auto;
 }
 
 .main-nav .nav-item a {
+  display: block;
+
   color: #000000;
   font-weight: 700;
+
+  text-align: center;
 
   line-height: 56px;
 }
@@ -180,7 +188,6 @@ a {
 }
 
 .search-hotel .specify-dates-title {
-  display: block;
   margin: 0 auto 55px auto;
 
   line-height: 1.71;
@@ -282,16 +289,33 @@ a {
   display: flex;
 }
 
-.catalog-count {
+.catalog {
+  padding: 30px 70px;
+}
+
+.sort-container {
+  height: 85px;
+}
+
+.sort-container .search-count {
   font-size: 21px;
   font-weight: bold;
   line-height: 1.24;
   text-align: left;
+
+  margin-right: 50px;
 }
 
-.catalog .sort-label {
+.sort-container .sort-label {
   font-size: 12px;
   text-align: left;
+}
+
+.sort-container .catalog-sort {
+  margin: 0;
+  padding: 0;
+
+  width: 370px;
 }
 
 .catalog-sort .sort-item {
@@ -321,12 +345,32 @@ a {
   border-color: transparent;
 }
 
+.sort-container .sort-direction {
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
 .sort-direction .direction-item {
   list-style: none;
 }
 
+.catalog .catalog-list {
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-list .catalog-item {
   list-style: none;
+
+  display: flex;
+}
+
+.catalog-item .item-img {
+  margin-right: 30px;
+}
+
+.item-info h3 {
+  margin: 0;
 }
 
 .catalog-item .item-link {
@@ -343,6 +387,10 @@ a {
 
 .catalog-item .item-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item .item-rating {
+  margin: 0 0 0 auto;
 }
 
 .item-rating .rating-value {
