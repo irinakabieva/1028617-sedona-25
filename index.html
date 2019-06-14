@@ -105,26 +105,36 @@
         <form class="search-form" action="search.html" method="get">
           <p class="form-field">
             <label for="arrival-field">Дата заезда:</label>
-            <input type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
-            <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
+            <span class="input-container">
+              <input class="field-date" type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
+              <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
+            </span>
           </p>
           <p class="form-field">
             <label for="departure-field">Дата выезда:</label>
-            <input type="text" id="departure-field" name="departure" placeholder="4 июля 2017"/>
-            <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
+            <span class="input-container">
+              <input class="field-date" type="text" id="departure-field" name="departure" placeholder="4 июля 2017"/>
+              <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
+            </span>
           </p>
-          <p class="form-field">
-            <label for="adults-field">Взрослые:</label>
-            <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
-            <input type="text" id="adults-field" name="adults" placeholder="2" />
-            <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
-          </p>
-          <p class="form-field">
-            <label for="children-field">Дети:</label>
-            <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
-            <input type="text" id="children-field" name="children" placeholder="2" />
-            <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
-          </p>
+          <div class="fields-container">
+            <p class="form-field adults-count">
+              <label for="adults-field">Взрослые:</label>
+              <span class="input-container">
+                <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
+                <input type="text" id="adults-field" name="adults" placeholder="2" />
+                <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
+              </span>
+            </p>
+            <p class="form-field children-count">
+              <label for="children-field">Дети:</label>
+              <span class="input-container">
+                <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
+                <input type="text" id="children-field" name="children" placeholder="2" />
+                <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
+              </span>
+            </p>
+          </div>
           <button class="button button-blue button-submit" type="submit">найти</button>
         </form>
       </div>

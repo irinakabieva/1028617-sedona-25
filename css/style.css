@@ -74,6 +74,17 @@ a {
   color: rgba(255, 255, 255, 0.3)
 }
 
+.button-icon {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.icon-calendar {
+  background: url("../img/calendar-icon.svg") no-repeat;
+}
+
 .main-nav {
   position: relative;
 }
@@ -277,7 +288,7 @@ a {
   margin: 0 auto;
 }
 
-.search-hotel .search-button {
+.search-hotel-container .search-button {
   display: block;
   padding: 35px 0;
 
@@ -286,40 +297,112 @@ a {
   font-weight: bold;
 }
 
-.search-hotel .search-form {
+.search-hotel-container .search-form {
+  box-sizing: border-box;
+
   position: absolute;
-  display: none;
+  width: 568px;
+
+  padding: 55px;
+  background: #fff;
+
+  font-weight: bold;
 }
 
-.search-hotel input {
+.search-form .form-field {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 0 30px 0;
+}
+
+.form-field .input-container {
+  display: block;
+  position: relative;
+
+  width: 346px;
+}
+
+.input-container .icon-calendar {
+  top: 10px;
+  right: 10px;
+}
+
+.input-container .icon-minus {
+  top: 14px;
+  left: 14px;
+}
+
+.input-container .icon-plus {
+  top: 14px;
+  right: 14px;
+}
+
+.search-form .fields-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.fields-container .form-field {
+  width: 180px;
+  margin: 0;
+}
+
+.fields-container .form-field:nth-child(odd) {
+  width: 225px;
+}
+
+.fields-container .input-container {
+  width: 114px;
+}
+
+.search-form input {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 10px 0 10px 10px;
+
   font: inherit;
   font-weight: bold;
 
   background: #f2f2f2;
   border: 1px solid #f2f2f2;
   line-height: 1.86;
+
+  text-transform: uppercase;
 }
 
-.search-hotel input:hover {
+.search-form input:hover {
   background: #ebebeb;
   border-color: #ebebeb;
 }
 
-.search-hotel input:focus {
+.search-form input:focus {
   background: transparent;
   border-color: #e5e5e5;
   outline: none;
 }
 
-.search-hotel .button-icon {
-  background: #ebebeb;
-  display: inline-block;
+.adults-count input,
+.children-count input {
+  text-align: center;
 }
 
-.search-hotel .button-submit {
+.search-form .button-submit {
+  width: 100%;
+
   line-height: 1.24;
   font-size: 21px;
   font-weight: bold;
+
+  margin-top: 50px;
+  padding: 20px 0;
+  text-transform: uppercase;
 }
 
 .footer {
@@ -402,6 +485,9 @@ a {
 
 .sort-container {
   display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
 }
 
 .catalog {
@@ -410,6 +496,8 @@ a {
 
 .sort-container {
   height: 85px;
+
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .sort-container .search-count {
@@ -424,13 +512,20 @@ a {
 .sort-container .sort-label {
   font-size: 12px;
   text-align: left;
+
+  margin-right: 40px;
 }
 
 .sort-container .catalog-sort {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
   margin: 0;
   padding: 0;
 
-  width: 370px;
+  width: 240px;
 }
 
 .catalog-sort .sort-item {
@@ -461,6 +556,13 @@ a {
 }
 
 .sort-container .sort-direction {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  width: 30px;
+
   margin: 0 0 0 auto;
   padding: 0;
 }
@@ -469,23 +571,45 @@ a {
   list-style: none;
 }
 
+.sort-direction .button-icon {
+  width: 10px;
+  background: #81b3d2;
+}
+
 .catalog .catalog-list {
   margin: 0;
   padding: 0;
 }
 
 .catalog-list .catalog-item {
-  list-style: none;
-
   display: flex;
+
+  list-style: none;
+  padding: 30px  0;
+
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .catalog-item .item-img {
   margin-right: 30px;
 }
 
-.item-info h3 {
+.catalog-item .item-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-info .item-title,
+.item-info .item-description,
+.item-info .buttons {
   margin: 0;
+}
+
+.item-info .button {
+  padding: 5px 15px;
 }
 
 .catalog-item .item-link {
@@ -505,6 +629,12 @@ a {
 }
 
 .catalog-item .item-rating {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+  justify-content: space-between;
+
   margin: 0 0 0 auto;
 }
 
