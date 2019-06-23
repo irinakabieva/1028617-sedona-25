@@ -10,11 +10,11 @@
 <body>
   <header class="container">
     <nav class="main-nav">
-      <a class="logo" href="index.html">
+      <a class="logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона">
       </a>
       <ul class="nav-items">
-        <li class="nav-item current-page">
+        <li class="nav-item">
           <a href="info.html">Информация</a>
         </li>
         <li class="nav-item">
@@ -101,8 +101,8 @@
       <b class="interested-title">Заинтересовались</b>
       <p class="specify-dates-title">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <div class="search-hotel-container">
-        <a href="catalog.html" class="button button-brown search-button">Поиск гостиницы в Седоне</a>
-        <form class="search-form" action="search.html" method="get">
+        <button class="button button-brown search-button" type="button">Поиск гостиницы в Седоне</button>
+        <form class="search-form visible" action="search.html" method="get">
           <p class="form-field">
             <label for="arrival-field">Дата заезда:</label>
             <span class="input-container">
@@ -147,8 +147,8 @@
   <footer class="footer container">
     <p class="visitsedona">#visitsedona</p>
     <ul class="social-links">
-      <li class="social-link">
-        <a class="link-twitter" href="http://twitter.com" aria-label="Твитер">
+      <li>
+        <a class="social-link" href="http://twitter.com" aria-label="Твитер">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
             <g><g>
               <path fill="#fff" d="M10.949.146c1.685-.496 2.984.27 3.577 1.18.673-.232 1.331-.482 2.011-.709a2.345 2.345 0 0 1-.857
@@ -160,19 +160,16 @@
           </svg>
         </a>
       </li>
-      <li class="social-link">
-        <a href="http://facebook.com" aria-label="Фейсбук">
+      <li>
+        <a class="social-link" href="http://facebook.com" aria-label="Фейсбук">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
             <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
           </svg>
         </a>
       </li>
-      <li class="social-link">
-        <a href="http://youtube.com" aria-label="Ютуб">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
-            <image width="20" height="16" overflow="visible" xlink:href="youtube.png"/>
-            <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
-          </svg>
+      <li>
+        <a class="social-link" href="http://youtube.com" aria-label="Ютуб">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
         </a>
       </li>
     </ul>
