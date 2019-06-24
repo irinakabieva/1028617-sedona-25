@@ -11,7 +11,7 @@ body {
 
   text-transform: uppercase;
 
-  background: #fff;
+  background: #f2f2f2;
 }
 
 img {
@@ -19,9 +19,12 @@ img {
   height: auto;
 }
 
-.container {
+.content-area {
   width: 1200px;
   margin: 0 auto;
+
+  background: #fff;
+  box-shadow: 0 0 5px #dbdbdb;
 }
 
 .visually-hidden {
@@ -218,6 +221,7 @@ a {
 
 .reason-item .reason-image {
   width: 800px;
+  align-self: center;
 }
 
 .reason-description .description-header {
@@ -544,7 +548,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+}
+
+.visitsedona,
+.social-links,
+.copyright {
+  width: 400px;
+  text-align: center;
 }
 
 .visitsedona {
@@ -552,8 +562,6 @@ a {
   font-weight: bold;
   line-height: 1.24;
   text-align: center;
-
-  width: 135px;
 }
 
 .social-links {
@@ -564,9 +572,8 @@ a {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  justify-content: center;
   align-items: center;
-
-  width: 150px;
 
   margin: 0;
   padding: 0;
@@ -577,10 +584,6 @@ a {
   text-align: center;
   margin-left: 5px;
   margin-bottom: 5px;
-}
-
-.social-links li:nth-child(3n + 1) {
-  margin-left: 0;
 }
 
 .social-link {
