@@ -224,8 +224,10 @@ a {
 }
 
 .reason-item .reason-description {
-  width: 310px;
-  padding: 45px 45px 60px 45px;
+  box-sizing: border-box;
+  width: 400px;
+
+  padding: 45px 60px 60px 60px;
 }
 
 .reason-item .reason-image {
@@ -250,7 +252,6 @@ a {
   margin-bottom: 20px;
 }
 
-.reason-item .reason-description,
 .reason-item .reason-description {
   background: #81b3d2;
   color: #fff;
@@ -283,8 +284,9 @@ a {
   background: #fff;
   color: #000;
 
-  padding-top: 60px;
-  padding-bottom: 75px;
+  width: 400px;
+
+  padding: 58px 50px 75px 50px;
 }
 
 .additional-reasons .description-header {
@@ -564,7 +566,7 @@ a {
   position: absolute;
   transform: translateY(-100%);
 
-  padding: 35px 0 25px 0;
+  padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,6 +575,11 @@ a {
   -ms-flex-pack: distribute;
 
   background: rgba(255, 255, 255, 0.9);
+}
+
+.inner-page .footer {
+  position: static;
+  transform: none;
 }
 
 .visitsedona,
@@ -651,6 +658,8 @@ a {
 .copyright {
   line-height: 1.86;
   text-align: center;
+
+  margin: 0;
 }
 
 .academy-link {
@@ -669,6 +678,10 @@ a {
   fill: #bdbbbc;
 }
 
+.catalog {
+  padding: 30px 70px;
+}
+
 .sort-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -681,16 +694,18 @@ a {
   -ms-flex-align: center;
 
   align-items: center;
-}
-
-.catalog {
-  padding: 30px 70px;
-}
-
-.sort-container {
-  height: 85px;
+  justify-content: space-between;
 
   border-bottom: 1px solid #f2f2f2;
+}
+
+.sort-container .col-1 {
+  min-width: 160px;
+}
+
+.sort-container .col-2 {
+  display: flex;
+  min-width: 895px;
 }
 
 .sort-container .search-count {
@@ -698,8 +713,6 @@ a {
   font-weight: bold;
   line-height: 1.24;
   text-align: left;
-
-  margin-right: 50px;
 }
 
 .sort-container .sort-label {
@@ -722,14 +735,18 @@ a {
 
   justify-content: space-between;
 
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 0;
-
-  width: 240px;
 }
 
 .catalog-sort .sort-item {
   list-style: none;
+
+  margin-right: 35px;
+}
+
+.catalog-sort .sort-item:last-child {
+  margin-right: 0;
 }
 
 .catalog-sort a {
@@ -770,7 +787,7 @@ a {
 
   width: 30px;
 
-  margin: 0 0 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -801,6 +818,7 @@ a {
 
 .catalog-item .item-img {
   margin-right: 30px;
+  align-self: center;
 }
 
 .catalog-item .item-info {
@@ -820,12 +838,19 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+
+  max-width: 790px;
 }
 
 .item-info .item-title,
 .item-info .item-description,
 .item-info .buttons {
   margin: 0;
+}
+
+.item-info .item-title,
+.item-info .item-description {
+  margin-bottom: 10px;
 }
 
 .item-info .button {
