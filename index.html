@@ -31,12 +31,13 @@
         </nav>
       </header>
       <main>
-        <h1 class="visually-hidden">Сайт штата Седона</h1>
-        <div class="welcome">
-          <!-- Сделать темный фон -->
-          <img src="img/welcome-text.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону" />
-        </div>
-        <b class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+        <section class="welcome">
+          <h1 class="visually-hidden">Сайт штата Седона</h1>
+          <div class="image-container">
+            <img src="img/welcome-text.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону" />
+          </div>
+          <b class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+        </section>
         <section class="reasons">
           <h2 class="visually-hidden">5 причин посетить Седону</h2>
           <p class="reasons-title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -123,7 +124,7 @@
                   <label for="adults-field">Взрослые:</label>
                   <span class="input-container">
                     <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
-                    <input type="text" id="adults-field" name="adults" placeholder="2" />
+                    <input type="text" id="adults-field" name="adults" placeholder="0" value="2" />
                     <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
                   </span>
                 </p>
@@ -131,7 +132,7 @@
                   <label for="children-field">Дети:</label>
                   <span class="input-container">
                     <button class="button button-icon icon-minus" type="button" aria-label="уменьшить количество на еденицу"></button>
-                    <input type="text" id="children-field" name="children" placeholder="2" />
+                    <input type="text" id="children-field" name="children" placeholder="0" value="0"/>
                     <button class="button button-icon icon-plus" type="button" aria-label="увеличить количество на еденицу"></button>
                   </span>
                 </p>
@@ -142,8 +143,7 @@
         </section>
         <section class="google-map">
           <h2 class="visually-hidden">Седона на карте мира</h2>
-          <img src="img/map.jpg" width="1200" height="593" alt="Седона, Коконино-Каунти, штат Аризона, Соединённые Штаты Америки">
-        </section>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCcyYIMd" width="1200" height="595" frameborder="0" allowfullscreen="true"></iframe></section>
       </main>
       <footer class="footer">
         <p class="visitsedona">#visitsedona</p>
