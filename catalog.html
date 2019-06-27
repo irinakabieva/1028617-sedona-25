@@ -32,38 +32,53 @@
       </header>
       <main>
         <h1 class="visually-hidden">Каталог доступного жилья штата Седона</h1>
-        <section class="search-form">
+        <section class="catalog-search">
           <h2 class="visually-hidden"> Форма поиска жилья</h2>
-          <!-- Форма -->
+          <form class="catalog-search-form" action="search.html" method="get">
+            <fieldset>
+              <legend>инфраструктура</legend>
+              <label>
+                <input type="checkbox" name="infrastructure[]" value="pool">
+                <span class="checkbox-icon"></span>
+                бассеин
+              </label>
+              <label>
+                <input type="checkbox" name="infrastructure[]" value="parking">
+                <span class="checkbox-icon"></span>
+                парковка
+              </label>
+              <label>
+                <input type="checkbox" name="infrastructure[]" value="wifi">
+                <span class="checkbox-icon"></span>
+                wi-fi
+              </label>
+            </fieldset>
+          </form>
         </section>
         <section class="catalog">
           <h2 class="visually-hidden">Список доступного жилья</h2>
           <div class="sort-container">
-            <div class="col-1">
-              <b class="search-count">Найдено: 3</b>
-            </div>
-            <div class="col-2">
-              <span class="sort-label">Сортировка</span>
-              <ul class="catalog-sort">
-                <li class="sort-item sort-current">
-                  <a href="#">По цене</a>
-                </li>
-                <li class="sort-item">
-                  <a href="#">По типу</a>
-                </li>
-                <li class="sort-item">
-                  <a href="#">По рейтингу</a>
-                </li>
-              </ul>
-              <ul class="sort-direction">
-                <li class="direction-item">
-                  <a href="#" class="sort-asc button button-icon" aria-label="По возрастанию"></a>
-                </li>
-                <li class="direction-item direction-current">
-                  <a href="#" class="sort-dsc button button-icon" aria-label="По убыванию"></a>
-                </li>
-              </ul>
-            </div>
+            <b class="search-count">Найдено: 3</b>
+            <span class="sort-label">Сортировка</span>
+            <ul class="catalog-sort">
+              <li class="sort-item sort-current">
+                <a href="#">По цене</a>
+              </li>
+              <li class="sort-item">
+                <a href="#">По типу</a>
+              </li>
+              <li class="sort-item">
+                <a href="#">По рейтингу</a>
+              </li>
+            </ul>
+            <ul class="sort-direction">
+              <li class="direction-item">
+                <a href="#" class="sort-asc button button-icon" aria-label="По возрастанию"></a>
+              </li>
+              <li class="direction-item direction-current">
+                <a href="#" class="sort-dsc button button-icon" aria-label="По убыванию"></a>
+              </li>
+            </ul>
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
