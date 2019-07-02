@@ -11,7 +11,7 @@
     <div class="content-area inner-page">
       <header>
         <nav class="main-nav">
-          <a class="logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <a class="logo" href="index.html">
             <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона">
           </a>
           <ul class="nav-items">
@@ -32,11 +32,11 @@
       </header>
       <main>
         <h1 class="visually-hidden">Каталог доступного жилья штата Седона</h1>
-        <section class="catalog-search">
+        <section class="catalog-filter">
           <h2 class="visually-hidden"> Форма поиска жилья</h2>
-          <form class="catalog-search-form" action="search.html" method="get">
+          <form class="filter-form" action="search.html" method="get">
             <fieldset>
-              <legend>инфраструктура</legend>
+              <legend>инфраструктура:</legend>
               <label>
                 <input type="checkbox" name="infrastructure[]" value="pool">
                 <span class="checkbox-icon"></span>
@@ -53,14 +53,47 @@
                 wi-fi
               </label>
             </fieldset>
+            <fieldset>
+              <legend>тип жилья:</legend>
+              <label>
+                <input type="checkbox" name="apartment_type[]" value="hotel">
+                <span class="checkbox-icon"></span>
+                гостиница
+              </label>
+              <label>
+                <input type="checkbox" name="apartment_type[]" value="motel">
+                <span class="checkbox-icon"></span>
+                мотель
+              </label>
+              <label>
+                <input type="checkbox" name="apartment_type[]" value="apartments">
+                <span class="checkbox-icon"></span>
+                апартаменты
+              </label>
+            </fieldset>
+            <fieldset class="price-filter">
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
+            </fieldset>
           </form>
         </section>
         <section class="catalog">
           <h2 class="visually-hidden">Список доступного жилья</h2>
-          <div class="sort-container">
-            <b class="search-count">Найдено: 3</b>
+          <div class="filter-sort">
+            <b class="filter-result">Найдено: 3</b>
             <span class="sort-label">Сортировка</span>
-            <ul class="catalog-sort">
+            <ul class="sort-result">
               <li class="sort-item sort-current">
                 <a href="#">По цене</a>
               </li>
