@@ -614,11 +614,13 @@ a {
   position: relative;
 }
 
-.map iframe {
+.map > iframe {
   position: absolute;
 
   width: 1200px;
   height: 595px;
+
+  border: 0;
 }
 
 .footer {
