@@ -107,44 +107,46 @@
           <div class="search-container">
             <button class="button button-brown search-button" type="button">Поиск гостиницы в Седоне</button>
             <form class="search-form" action="search.html" method="get">
-              <p class="form-field">
-                <label for="arrival-field">Дата заезда:</label>
-                <span class="input-container">
+              <div class="form-content">
+                <p class="form-field">
+                  <label for="arrival-field">Дата заезда:</label>
+                  <span class="input-container">
                       <input class="field-date" type="text" id="arrival-field" name="arrival" placeholder="24 апреля 2017"/>
                       <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
                     </span>
-              </p>
-              <p class="form-field">
-                <label for="departure-field">Дата выезда:</label>
-                <span class="input-container">
+                </p>
+                <p class="form-field">
+                  <label for="departure-field">Дата выезда:</label>
+                  <span class="input-container">
                       <input class="field-date" type="text" id="departure-field" name="departure"
                              placeholder="4 июля 2017"/>
                       <button class="button button-icon icon-calendar" type="button" aria-label="календарь"></button>
                     </span>
-              </p>
-              <div class="fields-container">
-                <p class="form-field adults-count">
-                  <label for="adults-field">Взрослые:</label>
-                  <span class="input-container">
+                </p>
+                <div class="fields-container">
+                  <p class="form-field adults-count">
+                    <label for="adults-field">Взрослые:</label>
+                    <span class="input-container">
                         <button class="button button-icon icon-minus" type="button"
                                 aria-label="уменьшить количество на еденицу"></button>
                         <input type="text" id="adults-field" name="adults" placeholder="0" value="2"/>
                         <button class="button button-icon icon-plus" type="button"
                                 aria-label="увеличить количество на еденицу"></button>
                       </span>
-                </p>
-                <p class="form-field children-count">
-                  <label for="children-field">Дети:</label>
-                  <span class="input-container">
+                  </p>
+                  <p class="form-field children-count">
+                    <label for="children-field">Дети:</label>
+                    <span class="input-container">
                         <button class="button button-icon icon-minus" type="button"
                                 aria-label="уменьшить количество на еденицу"></button>
                         <input type="text" id="children-field" name="children" placeholder="0" value="0"/>
                         <button class="button button-icon icon-plus" type="button"
                                 aria-label="увеличить количество на еденицу"></button>
                       </span>
-                </p>
+                  </p>
+                </div>
+                <button class="button button-blue button-submit" type="submit">найти</button>
               </div>
-              <button class="button button-blue button-submit" type="submit">найти</button>
             </form>
           </div>
         </section>
@@ -211,5 +213,6 @@
         </p>
       </footer>
     </div>
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>

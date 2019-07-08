@@ -208,6 +208,7 @@ a {
   height: 57px;
 
   background: url("../img/welcome-bottom.svg") no-repeat;
+  background-size: contain;
 }
 
 .welcome .title {
@@ -371,6 +372,7 @@ a {
 
 .search-hotel {
   padding-top: 50px;
+  position: relative;
 }
 
 .search-hotel .interested-title {
@@ -409,12 +411,21 @@ a {
   text-transform: uppercase;
 }
 
-
 .search-container .search-form {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+
+  -webkit-animation: height-auto 1s;
+
+  animation: height-auto 1s;
+}
+
+.search-form .form-content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
-  position: absolute;
+  position: relative;
   z-index: 1;
 
   width: 568px;
@@ -424,9 +435,87 @@ a {
 
   font-weight: bold;
 
-  -webkit-animation: search-form 1s;
+  -webkit-animation: form-move-down 1s;
 
-  animation: search-form 1s;
+  animation: form-move-down 1s;
+}
+
+.search-container .search-form.hidden {
+  -webkit-animation: height-zero 1.5s;
+  animation: height-zero 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.search-form.hidden .form-content {
+  -webkit-animation: form-move-up 1s;
+  animation: form-move-up 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes height-zero {
+  to {
+    height: 0;
+  }
+}
+
+@keyframes height-zero {
+  to {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes height-auto {
+  to {
+    height: auto;
+  }
+}
+
+@keyframes height-auto {
+  to {
+    height: auto;
+  }
+}
+
+@-webkit-keyframes form-move-up {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -500px;
+  }
+}
+
+@keyframes form-move-up {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -500px;
+  }
+}
+
+@-webkit-keyframes form-move-down {
+  from {
+    top: -500px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes form-move-down {
+  from {
+    top: -500px;
+  }
+
+  to {
+    top: 0;
+  }
 }
 
 .search-form .form-field {
